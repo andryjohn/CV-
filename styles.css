@@ -1,0 +1,197 @@
+
+body{
+	font-family: helvetica, serif;
+	font-size: 13px;
+	margin: 0px; /*ici pour */
+	padding: 0px; /*afficher le meme resultat sur tous les navigateur*/
+
+}
+img{
+  border: 3px solid #fff;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+
+}
+
+
+
+h1{
+   font-size: 40px;  
+   font-weight: 600;
+   text-align: center;
+}
+header{
+   height: 120px;
+   opacity: 0.9;
+   text-shadow: 5px 5px RGBa(00, 00, 00,.15)
+  
+}
+footer{
+	height:80px;
+	padding-top:30px;
+	text-align: center;
+	background-color: #C5C5C5;/*gris*/
+	border-top: 2px solid #AAA;
+}
+
+nav li{
+	list-style: none;/*afin de retirer les puces*/
+	float: left;/*afin de les mettre en ligne*/
+}
+nav ul{
+	margin: 0px;/*idem pour eviter des affichages différents*/ 
+	padding: 0px;/*en fontion des différents navigateur*/
+}
+nav{
+	width: 100%;
+	background-color: #424558;
+}
+
+nav a{
+	display: inline-block;
+	text-decoration: none; /*afin d'éviter un surlignement, qui apparaisse avec le lien*/
+	padding: 20px 30px; /*afin d'ecarter notre lien du texte, et que ceux ci puissent ètre cliquable*/
+	color:#FFF;
+	text-transform: uppercase;	
+	font-size: 15px;
+}
+.table{
+	display: table;
+	margin: 0 auto;
+}
+.menu-ind:hover{                            /*nous permetra d'afficher une couleur et une bordure,
+                                                   lorsqu'un utilisateur 
+                                                           voudra cliquer sur le lien*/
+	border-top: 5px solid #0070bb;
+	background-color: rgba(241,211,79,0.15);    /*le RGBa permettra d'afficher un peu de transparence*/
+}
+.menu-exp:hover{
+	
+	border-top: 5px solid  #0070bb;
+	background-color: rgba(241,211,79,0.15);
+}
+
+.menu-hob:hover{
+	border-top: 5px solid #0070bb;
+	background-color: rgba(241,211,79,0.15);
+}
+
+.menu-con:hover{
+	border-top: 5px solid  #0070bb;
+	background-color: rgba(241,211,79,0.15);
+}
+nav li:hover a{
+	padding: 15px 30px 20px 50px;              
+}
+/*Nous allons déjà commencer par définir la largeur de nos sections, 
+ainsi que la hauteur minimale et les marges intérieures et extérieures.*/
+section{
+	width: 100%;
+	min-height: 300px;
+	padding-bottom: 10PX;
+	margin-bottom: 10px;
+}
+/*Ensuite, nous allons rajouter des marges gauche et droite à nos div class="sec" afin de centrer un peu le contenu des sections.
+On précise ici des valeurs en pourcentage afin de simplifier le passage en responsive par la suite.*/
+.sec{
+	margin: 10px 15%;
+	box-shadow: 35px 25px 65px #fff;
+}
+
+
+/*Nous allons après devoir organiser chacune de nos sections.
+Nous allons déjà faire flotter tous nos div de sous-section. En effet, rappelez vous 
+que nous avons utilisé des div pour "couper" chacune de nos sections en deux (ou en quatre).
+Nous allons maintenant faire flotter tous ces div afin que les contenus se placent côte à côte.
+
+Nous avons séparé nos sections en deux avec div class="left" et div class="right".
+
+Dans ce cas, on veut que la sous section gauche occupe 30% de l’espace disponible et la section droite les 70% restants.*/
+.left{
+	float: left;
+	width: 30%;
+}
+.right{
+	float: left;
+	width: 70%;
+}
+
+/*Ici, la section compétence est un peu particulière puisqu’on la découpe en deux puis à nouveau en deux.
+Dans ce cas, on veut que chacune des quatre parties de section occupe 25% de l’espace disponible.
+On applique donc un width : 50% aux div qui coupent la section en deux et 
+à nouveau 50% pour les div qui recoupent en deux.*/
+.cleft, .cright, .sousleft, .sousright{
+	width: 50%;
+	float: left;
+
+}
+/*Arrivé ici, on se heurte à un problème : nos div de section contiennent des enfants flottants.
+ Or, en CSS, tout parent non flottant qui possède des enfants flottants va collapser.
+
+Pour empêcher ce comportement, nous allons utiliser le clearfix CSS suivant sur le div parent en question :*/
+.sec::after, .exo::after, .reco::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+#présentation{                                    	
+	border-top: 5px solid #11294c;
+	background-color: rgba(17, 41, 76, 0.15);
+}
+#parcours{
+	border-top: 5px solid #11294c;
+	background-color: rgba(17, 41, 76, 0.15);
+}
+.orange{
+	border-top: 5px solid ##11294c;
+	background-color:rgba(17,41,76,0.15);
+    margin-bottom: 0px
+
+}
+.rose{
+	border-top: 5px solid ##11294c;
+	background-color:rgba(17,41,76,0.15);
+    margin-bottom: 0px;
+}
+
+.leftexp{
+
+    width: 45%;
+    float: left;
+
+}
+.rightexp{
+
+    width: 50%;
+    float: left;
+    margin-left: 5%
+
+}
+.leftexp img{
+ 
+     width: 100%;
+     max-width: 400px;
+
+}
+/*.leftexp{
+
+    width: 45%;
+    float: left;
+
+.right{
+width: 50%;
+    float: left;
+    margin-left: 5%;
+}
+.leftexp img{
+
+	width: 100%;
+    
+    */
+.bleu{
+	border-top: 5px solid ##11294c;
+	background-color:rgba(17,41,76,0.15);
+    margin-bottom: 0px;
+}
+
